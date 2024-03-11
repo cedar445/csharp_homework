@@ -1,0 +1,7 @@
+C:\Users\lsk15\Desktop\课堂\大二下\软件构造基础\csharp_homework\assigment2\problem4\bin\Debug\problem4.exe.config
+C:\Users\lsk15\Desktop\课堂\大二下\软件构造基础\csharp_homework\assigment2\problem4\bin\Debug\problem4.exe
+C:\Users\lsk15\Desktop\课堂\大二下\软件构造基础\csharp_homework\assigment2\problem4\bin\Debug\problem4.pdb
+C:\Users\lsk15\Desktop\课堂\大二下\软件构造基础\csharp_homework\assigment2\problem4\obj\Debug\problem4.csproj.AssemblyReference.cache
+C:\Users\lsk15\Desktop\课堂\大二下\软件构造基础\csharp_homework\assigment2\problem4\obj\Debug\problem4.csproj.CoreCompileInputs.cache
+C:\Users\lsk15\Desktop\课堂\大二下\软件构造基础\csharp_homework\assigment2\problem4\obj\Debug\problem4.exe
+C:\Users\lsk15\Desktop\课堂\大二下\软件构造基础\csharp_homework\assigment2\problem4\obj\Debug\problem4.pdb
