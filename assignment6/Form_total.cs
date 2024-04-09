@@ -18,8 +18,17 @@ namespace assignment6
         {
             InitializeComponent();
             Data dt = new Data();
+            this.datas.Columns.Add("id","id");
+            this.datas.Columns.Add("customer","customer");
+            this.datas.Columns.Add("totalPrice","totalPrice");
+            List<Order>res= Data.orderService.QueryAll();
+            for (int i = 0; i < res.Count; i++)
+            {
+                this.datas.Rows.Add(res[i].Id.ToString(),
+                    res[i].Customer.Name.ToString(), 
+                    res[i].TotalPrice.ToString());
+            }           
         }
-
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
@@ -42,6 +51,18 @@ namespace assignment6
         {
             Form_delete form_Delete = new Form_delete();
             form_Delete.Show();
+        }
+
+        private void Form_total_Activated(object sender, EventArgs e)
+        {          
+            this.datas.Rows.Clear();
+            List<Order> res = Data.orderService.QueryAll();
+            for (int i = 0; i < res.Count; i++)
+            {
+                this.datas.Rows.Add(res[i].Id.ToString(),
+                    res[i].Customer.Name.ToString(),
+                    res[i].TotalPrice.ToString());
+            }           
         }
     }
     public class Data

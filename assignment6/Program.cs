@@ -16,7 +16,8 @@ namespace assignment6
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form_total());
+            Form_total form_Total = new Form_total();
+            Application.Run(form_Total);
         }
     }
 }

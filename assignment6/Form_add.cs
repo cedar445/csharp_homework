@@ -52,5 +52,6 @@ namespace assignment6
             od.AddDetails(new OrderDetail(resg, quantity));
             Close();
         }
+
     }
 }
