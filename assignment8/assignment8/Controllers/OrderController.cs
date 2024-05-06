@@ -13,11 +13,11 @@ namespace assignment8.Controllers
     [ApiController]
     public class OrderController : ControllerBase
     {
-        private readonly OrderContext orderDb;
-		private OrderService ods=new OrderService();
-        public OrderController(OrderContext orderDb)
+        //private readonly OrderContext orderDb;
+        private OrderService ods;
+        public OrderController(OrderService ods)
         {
-            this.orderDb = orderDb;
+            this.ods = ods;
         }
         // GET: api/order/{id}  id为路径参数
         [HttpGet("{id}")]

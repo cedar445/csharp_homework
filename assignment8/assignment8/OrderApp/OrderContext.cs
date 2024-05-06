@@ -1,21 +1,22 @@
-﻿using MySql.Data.EntityFramework;
-using System.Data.Entity;
+﻿using Microsoft.EntityFrameworkCore;
 using System.Security.Cryptography.X509Certificates;
 using System.Security.Policy;
 
 namespace OrderApp {
-  
-    [DbConfigurationType(typeof(MySqlEFConfiguration))]
-    public class OrderContext: DbContext
+
+    public class OrderContext : DbContext
     {
-        public OrderContext() : base("OrderDataBase")
+        public OrderContext(DbContextOptions<OrderContext> options)
+            : base(options)
         {
-            Database.SetInitializer(new DropCreateDatabaseIfModelChanges<OrderContext>());
+            this.Database.EnsureCreated(); //自动建库建表
         }
-        
         public DbSet<Order> Orders { get; set; }
-        public DbSet<OrderDetail> OrderDetails { get; set; }
+
         public DbSet<Goods> Goods { get; set; }
+
         public DbSet<Customer> Customers { get; set; }
+
+        public DbSet<OrderDetail> OrderDetails { get; set; }
     }
 }
